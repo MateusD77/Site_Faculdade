@@ -1,0 +1,166 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Jacquard+12&family=Jersey+15&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fascinate+Inline&family=Indie+Flower&family=Jersey+15&family=Protest+Guerrilla&display=swap');
+/* Estilo geral */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    background-image: url("fundopt.jpg"); /* Adicione a imagem da parede de tijolos */
+    background-repeat: repeat;
+    background-attachment: fixed; /* Fixa a imagem em relação à janela */
+    background-position: center;
+}
+
+header {
+    background-image: url("preto.jpg");
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
+
+h1 {
+    font-family: 'Protest Guerrilla'; /* Adicione a fonte "Orbitron" */
+    color: rgb(255, 238, 3);
+    text-shadow: 0 0 5px rgb(255, 0, 0), 0 0 10px rgb(255, 0, 0), 0 0 15px rgb(255, 0, 0);
+    font-size: 2.5em;
+}
+sub {
+    font-family: "Indie Flower", cursive; /* Fonte para texto em subscrito */
+    color: rgb(255, 0, 0); /* Cor do texto */
+    font-size: 80%; /* Tamanho da fonte reduzido */
+    text-shadow: 0 0 5px rgb(255, 238, 0), 0 0 10px rgb(255, 238, 0), 0 0 15px rgb(255, 238, 3); /* Sombra do texto */
+}
+
+
+nav {
+    background-color: rgba(255, 0, 255, 0.26);
+    padding: 1em 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 1em;
+}
+
+nav a {
+    text-decoration: none;
+    color: rgb(255, 127, 127);
+    text-shadow: 0 0 5px rgb(102, 0, 0), 0 0 10px rgb(182, 0, 0), 0 0 15px rgb(255, 0, 0);
+    font-weight: bold;
+}
+
+main {
+    padding: 2em;
+}
+
+section {
+    background-image: url("preto.jpg"); /* Adicione um fundo branco translúcido */
+    padding: 2em;
+    margin-bottom: 2em;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    font-family: 'Jersey 15';
+    font-size: 250%;
+    color: rgb(255, 238, 3);
+    text-shadow: 0 0 5px rgb(255, 0, 0), 0 0 10px rgb(255, 0, 0), 0 0 15px rgb(255, 0, 0); /* Adicione um efeito de sombra em neon verde */
+}
+
+/* Estilo do carrossel */
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 250px;
+    text-align: center;
+    padding: 1em;
+    margin-right: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 1em;
+}
+
+.carousel-item h3 {
+    color: #333;
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+    text-shadow: 0 0 5px #00ff00; /* Adicione um efeito de sombra em neon verde */
+}
+
+.carousel-item p {
+    color: #666;
+    font-size: 1em;
+    margin-bottom: 1em;
+}
+
+.carousel-item button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 0.8em 1.5em;
+    border-radius: 5px;
+    cursor: pointer;
+    text-shadow: 0 0 5px #00ff00; /* Adicione um efeito de sombra em neon verde */
+}
+
+.carousel-prev,
+.carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #ff0000;
+    color: #fffb00;
+    border: none;
+    padding: 0.8em 1.5em;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity 0.3s ease-in-out;
+    text-shadow: 0 0 5px rgb(255, 238, 0), 0 0 10px rgb(255, 238, 0), 0 0 15px rgb(255, 238, 3); /* Adicione um efeito de sombra em neon verde */
+}
+
+.carousel-prev {
+    left: 10px;
+}
+
+.carousel-next {
+    right: 10px;
+}
+
+.carousel-prev:hover,
+.carousel-next:hover {
+    opacity: 1;
+}
+
+/* Estilo do rodapé */
+footer {
+    background-image: url("preto.jpg");
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
