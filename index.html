@@ -10,33 +10,215 @@ Trabalho em Web feito por:
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura a responsividade -->
-    <link rel="stylesheet" href="sty.css"> <!-- Link para o arquivo de estilos principal -->
-    <link rel="stylesheet" href="pizzas.css"> <!-- Link para o arquivo de estilos específico para pizzas -->
-    <title>PIZZARIAPACMAN</title> <!-- Título da página que aparece na aba do navegador -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>PIZZARIAPAC-MAN</title>
 </head>
 <body>
-<header>
-    <h1>PIZZARIA<sub>PAC-MAN</sub></h1> <!-- Título principal da página com "PAC-MAN" em subscrito -->
-</header>
+    <header>
+        <h1>PIZZARIA<sub>PAC-MAN</sub></h1>
+    </header>
+    <br>
+    <nav>
+        <ul>
+            <li><a href="#pizzas">Pizzas</a></li>
+            <li><a href="#hamburgueres">Hambúrgueres</a></li>
+            <li><a href="#combos">Combos</a></li>
+            <li><a href="#bebidas">Bebidas</a></li>
+        </ul>
+    </nav>
 
-<!-- Seção de navegação do cardápio -->
-<div class="calalogo">  
-    <div class="item centro"> Cardápio </div> <!-- Item alinhado à esquerda -->
-</div>
+    <main>
+        <section id="pizzas">
+            <h2>Pizzas</h2>
+            <div class="carousel-container">
+                <div class="carousel-track">
+                    <div class="carousel-item">
+                        <img src="images/pizza1.jpg" alt="Pizza 1">
+                        <h3>Super Mario Pizza</h3>
+                        <p>Mussarela, calabresa, cebola e pimentão. Uma explosão de sabores para você!</p>
+                        <p>R$ 35,00</p>
+                        <button>Adicionar ao Carrinho</button>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/pizza2.jpg" alt="Pizza 2">
+                        <h3>Sonic Pizza</h3>
+                        <p>Queijo, frango, catupiry e milho. A velocidade do sabor, perfeita para sua fome!</p>
+                        <p>R$ 40,00</p>
+                        <button>Adicionar ao Carrinho</button>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/pizza3.jpg" alt="Pizza 3">
+                        <h3>Zelda Pizza</h3>
+                        <p>Queijo, carne, bacon e tomate. Uma aventura de sabor que você vai amar!</p>
+                        <p>R$ 45,00</p>
+                        <button>Adicionar ao Carrinho</button>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/pizza4.jpg" alt="Pizza 4">
+                        <h3>Donkey Kong Pizza</h3>
+                        <p>Queijo, portuguesa, ovo e azeitona. Uma experiência saborosa e divertida!</p>
+                        <p>R$ 50,00</p>
+                        <button>Adicionar ao Carrinho</button>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/pizza5.jpg" alt="Pizza 5">
+                        <h3>Pac-Man Pizza</h3>
+                        <p>Queijo, calabresa, champignon e orégano. A pizza que vai te dar vontade de jogar!</p>
+                        <p>R$ 55,00</p>
+                        <button>Adicionar ao Carrinho</button>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/pizza6.jpg" alt="Pizza 6">
+                        <h3>Mega Man Pizza</h3>
+                        <p>Queijo, frango, catupiry, tomate e cebola. Uma combinação imbatível para seu paladar!</p>
+                        <p>R$ 60,00</p>
+                        <button>Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+                <button class="carousel-prev">Anterior</button>
+                <button class="carousel-next">Próximo</button>
+            </div>
+        </section>
 
-<hr> <!-- Linha horizontal para separar seções -->
+        <section id="hamburgueres">
+            <h2>Hambúrgueres</h2>
+            <div class="carousel-container">
+                <div class="carousel-track">
+                    <div class="carousel-item">
+                        <img src="images/hamburguer1.jpg" alt="Hambúrguer 1">
+                        <h3>Mario Burger</h3>
+                        <p>Carne, queijo, alface, tomate e molho especial. Uma combinação clássica e deliciosa!</p>
+                        <p>R$ 25,00</p>
+                        <button>Adicionar ao Carrinho</button>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/hamburguer2.jpg" alt="Hambúrguer 2">
+                        <h3>Sonic Burger</h3>
+                        <p>Carne, queijo, bacon, cebola caramelizada e molho barbecue. A velocidade do sabor!</p>
+                        <p>R$ 30,00</p>
+                        <button>Adicionar ao Carrinho</button>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/hamburguer3.jpg" alt="Hambúrguer 3">
+                        <h3>Luigi Burger</h3>
+                        <p>Carne, queijo, ovo, batata palha e molho agridoce. Uma explosão de sabores!</p>
+                        <p>R$ 35,00</p>
+                        <button>Adicionar ao Carrinho</button>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/hamburguer4.jpg" alt="Hambúrguer 4">
+                        <h3>Link Burger</h3>
+                        <p>Carne, queijo, alface, tomate, cebola e maionese. A combinação perfeita para sua aventura!</p>
+                        <p>R$ 40,00</p>
+                        <button>Adicionar ao Carrinho</button>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/hamburguer5.jpg" alt="Hambúrguer 5">
+                        <h3>Samus Burger</h3>
+                        <p>Carne, queijo, bacon, ovo, picles e molho picante. Para os que gostam de um toque especial!</p>
+                        <p>R$ 45,00</p>
+                        <button>Adicionar ao Carrinho</button>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/hamburguer6.jpg" alt="Hambúrguer 6">
+                        <h3>Pikachu Burger</h3>
+                        <p>Carne, queijo, alface, tomate e molho especial. Uma combinação clássica e saborosa!</p>
+                        <p>R$ 50,00</p>
+                        <button>Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+                <button class="carousel-prev">Anterior</button>
+                <button class="carousel-next">Próximo</button>
+            </div>
+        </section>
 
-<!-- Seção das pizzas -->
-<div class="pizzas">
-    <div class="titulo">Pizzas</div> <!-- Título da seção de pizzas -->
-    
-</div>
+        <section id="combos">
+            <h2>Combos</h2>
+            <div class="carousel-container">
+                <div class="carousel-track">
+                    <div class="carousel-item">
+                        <h3>Combo Super Mario</h3>
+                        <p>Pizza Super Mario + Refrigerante + Batata Frita. A combinação perfeita para uma refeição completa!</p>
+                        <p>R$ 50,00</p>
+                        <button>Adicionar ao Carrinho</button>
+                    </div>
+                    <div class="carousel-item">
+                        <h3>Combo Sonic</h3>
+                        <p>Sonic Burger + Refrigerante + Batata Frita. A velocidade do sabor em um combo irresistível!</p>
+                        <p>R$ 40,00</p>
+                        <button>Adicionar ao Carrinho</button>
+                    </div>
+                    <div class="carousel-item">
+                        <h3>Combo Pac-Man</h3>
+                        <p>Pac-Man Pizza + Refrigerante + Batata Frita. Um combo para você se divertir e saciar a fome!</p>
+                        <p>R$ 60,00</p>
+                        <button>Adicionar ao Carrinho</button>
+                    </div>
+                    <div class="carousel-item">
+                        <h3>Combo Zelda</h3>
+                        <p>Zelda Pizza + Refrigerante + Batata Frita. Uma aventura de sabor para você!</p>
+                        <p>R$ 55,00</p>
+                        <button>Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+                <button class="carousel-prev">Anterior</button>
+                <button class="carousel-next">Próximo</button>
+            </div>
+        </section>
 
-<!-- Rodapé da página -->
-<footer> 
-    Copyright © 2024 - Turma TI Estácio. Todos os direitos reservados. <!-- Texto de copyright -->
-</footer>
+        <section id="bebidas">
+            <h2>Bebidas</h2>
+            <div class="carousel-container">
+                <div class="carousel-track">
+                    <div class="carousel-item">
+                        <h3>Refrigerante</h3>
+                        <p>Coca-Cola, Pepsi, Fanta, Sprite. Para acompanhar sua refeição com um toque especial!</p>
+                        <p>R$ 5,00</p>
+                        <button>Adicionar ao Carrinho</button>
+                    </div>
+                    <div class="carousel-item">
+                        <h3>Suco</h3>
+                        <p>Laranja, Morango, Abacaxi, Uva. Refrescante e delicioso para qualquer ocasião!</p>
+                        <p>R$ 6,00</p>
+                        <button>Adicionar ao Carrinho</button>
+                    </div>
+                    <div class="carousel-item">
+                        <h3>Água</h3>
+                        <p>Com gás ou sem gás. Para hidratar e refrescar!</p>
+                        <p>R$ 3,00</p>
+                        <button>Adicionar ao Carrinho</button>
+                    </div>
+                    <div class="carousel-item">
+                        <h3>Cerveja</h3>
+                        <p>Brahma, Skol, Heineken, Stella Artois. Para completar seu momento de lazer!</p>
+                        <p>R$ 8,00</p>
+                        <button>Adicionar ao Carrinho</button>
+                    </div>
+                    <div class="carousel-item">
+                        <h3>Vinho</h3>
+                        <p>Tinto, Branco, Rosé. Para um brinde especial!</p>
+                        <p>R$ 20,00</p>
+                        <button>Adicionar ao Carrinho</button>
+                    </div>
+                    <div class="carousel-item">
+                        <h3>Whisky</h3>
+                        <p>Red Label, Black Label, Chivas Regal. Para um momento de puro prazer!</p>
+                        <p>R$ 30,00</p>
+                        <button>Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+                <button class="carousel-prev">Anterior</button>
+                <button class="carousel-next">Próximo</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        Copyright © 2024 - Turma TI Estácio. Todos os direitos reservados.
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
