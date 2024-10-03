@@ -1,166 +1,265 @@
-
+/* Importa as fontes do Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Jacquard+12&family=Jersey+15&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fascinate+Inline&family=Indie+Flower&family=Jersey+15&family=Protest+Guerrilla&display=swap');
+
 /* Estilo geral */
 body {
+    /* Remove as margens e preenchimento padrão */
     margin: 0;
     padding: 0;
+    /* Define a cor de fundo do corpo */
     background-color: #f4f4f4;
-    background-image: url("fundopt.jpg"); /* Adicione a imagem da parede de tijolos */
+    /* Define a imagem de fundo */
+    background-image: url("_img/fundopt.jpg"); 
+    /* Define a repetição da imagem de fundo */
     background-repeat: repeat;
-    background-attachment: fixed; /* Fixa a imagem em relação à janela */
+    /* Define o comportamento da imagem de fundo ao rolar a página */
+    background-attachment: fixed; 
+    /* Define a posição da imagem de fundo */
     background-position: center;
 }
 
 header {
-    background-image: url("preto.jpg");
+    /* Define a imagem de fundo do cabeçalho */
+    background-image: url("_img/preto.jpg");
+    /* Define a cor do texto */
     color: #fff;
+    /* Alinha o texto ao centro */
     text-align: center;
+    /* Define o preenchimento do cabeçalho */
     padding: 1em 0;
 }
 
 h1 {
-    font-family: 'Protest Guerrilla'; /* Adicione a fonte "Orbitron" */
+    /* Define a fonte do título */
+    font-family: 'Protest Guerrilla'; 
+    /* Define a cor do título */
     color: rgb(255, 238, 3);
+    /* Adiciona uma sombra em neon ao título */
     text-shadow: 0 0 5px rgb(255, 0, 0), 0 0 10px rgb(255, 0, 0), 0 0 15px rgb(255, 0, 0);
+    /* Define o tamanho do título */
     font-size: 2.5em;
 }
+
+/* Estilos para o texto subscrito */
 sub {
-    font-family: "Indie Flower", cursive; /* Fonte para texto em subscrito */
-    color: rgb(255, 0, 0); /* Cor do texto */
-    font-size: 80%; /* Tamanho da fonte reduzido */
-    text-shadow: 0 0 5px rgb(255, 238, 0), 0 0 10px rgb(255, 238, 0), 0 0 15px rgb(255, 238, 3); /* Sombra do texto */
+    /* Define a fonte do subscrito */
+    font-family: "Indie Flower", cursive; 
+    /* Define a cor do subscrito */
+    color: rgb(255, 0, 0); 
+    /* Define o tamanho do subscrito */
+    font-size: 80%; 
+    /* Adiciona uma sombra em neon ao subscrito */
+    text-shadow: 0 0 5px rgb(255, 238, 0), 0 0 10px rgb(255, 238, 0), 0 0 15px rgb(255, 238, 3); 
 }
 
-
 nav {
+    /* Define a cor de fundo da barra de navegação */
     background-color: rgba(255, 0, 255, 0.26);
+    /* Define o preenchimento da barra de navegação */
     padding: 1em 0;
+    /* Alinha o texto ao centro */
     text-align: center;
 }
 
 nav ul {
+    /* Remove a lista de marcadores */
     list-style: none;
+    /* Remove as margens da lista */
     margin: 0;
+    /* Remove o preenchimento da lista */
     padding: 0;
 }
 
 nav li {
+    /* Define o display dos itens da lista como bloco em linha */
     display: inline-block;
+    /* Define a margem entre os itens da lista */
     margin: 0 1em;
 }
 
 nav a {
+    /* Remove a decoração do link */
     text-decoration: none;
+    /* Define a cor do link */
     color: rgb(255, 127, 127);
+    /* Adiciona uma sombra em neon ao link */
     text-shadow: 0 0 5px rgb(102, 0, 0), 0 0 10px rgb(182, 0, 0), 0 0 15px rgb(255, 0, 0);
+    /* Define o peso da fonte do link */
     font-weight: bold;
 }
 
 main {
+    /* Define o preenchimento da área principal */
     padding: 2em;
 }
 
 section {
-    background-image: url("preto.jpg"); /* Adicione um fundo branco translúcido */
+    /* Define a imagem de fundo da seção */
+    background-image: url("_img/preto.jpg"); 
+    /* Define o preenchimento da seção */
     padding: 2em;
+    /* Define a margem inferior da seção */
     margin-bottom: 2em;
+    /* Define o raio da borda da seção */
     border-radius: 10px;
+    /* Define a sombra da seção */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Ocultar o overflow para que o conteúdo não ultrapasse */
+    overflow: hidden; 
 }
 
 section h2 {
+    /* Define a fonte do título da seção */
     font-family: 'Jersey 15';
+    /* Define o tamanho do título da seção */
     font-size: 250%;
+    /* Define a cor do título da seção */
     color: rgb(255, 238, 3);
-    text-shadow: 0 0 5px rgb(255, 0, 0), 0 0 10px rgb(255, 0, 0), 0 0 15px rgb(255, 0, 0); /* Adicione um efeito de sombra em neon verde */
+    /* Adiciona um efeito de sombra em neon verde ao título da seção */
+    text-shadow: 0 0 5px rgb(255, 0, 0), 0 0 10px rgb(255, 0, 0), 0 0 15px rgb(255, 0, 0); 
 }
 
 /* Estilo do carrossel */
 .carousel-container {
+    /* Define a posição relativa para o contêiner do carrossel */
     position: relative;
-    overflow: hidden;
+    /* Define a largura do contêiner do carrossel */
+    width: 100%; /* Ocultar o overflow */
 }
 
 .carousel-track {
+    /* Define o display da trilha do carrossel como flex */
     display: flex;
+    /* Define a transição da transformação da trilha do carrossel */
     transition: transform 0.5s ease-in-out;
 }
 
 .carousel-item {
+    /* Define a largura mínima do item do carrossel */
     min-width: 250px;
+    /* Alinha o texto do item do carrossel ao centro */
     text-align: center;
+    /* Define o preenchimento do item do carrossel */
     padding: 1em;
+    /* Define a margem direita do item do carrossel */
     margin-right: 20px;
+    /* Define a sombra do item do carrossel */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .carousel-item img {
+    /* Define a largura máxima da imagem do item do carrossel */
     max-width: 100%;
+    /* Define a altura da imagem do item do carrossel */
     height: auto;
+    /* Define o raio da borda da imagem do item do carrossel */
     border-radius: 10px;
+    /* Define a margem inferior da imagem do item do carrossel */
     margin-bottom: 1em;
 }
 
 .carousel-item h3 {
+    /* Define a cor do título do item do carrossel */
     color: #333;
+    /* Define o tamanho do título do item do carrossel */
     font-size: 1.2em;
+    /* Define a margem inferior do título do item do carrossel */
     margin-bottom: 0.5em;
-    text-shadow: 0 0 5px #00ff00; /* Adicione um efeito de sombra em neon verde */
+    /* Adiciona um efeito de sombra em neon verde ao título do item do carrossel */
+    text-shadow: 0 0 5px #00ff00; 
 }
 
 .carousel-item p {
+    /* Define a cor do parágrafo do item do carrossel */
     color: #666;
+    /* Define o tamanho do parágrafo do item do carrossel */
     font-size: 1em;
+    /* Define a margem inferior do parágrafo do item do carrossel */
     margin-bottom: 1em;
 }
 
 .carousel-item button {
+    /* Define a cor de fundo do botão do item do carrossel */
     background-color: #333;
+    /* Define a cor do texto do botão do item do carrossel */
     color: #fff;
+    /* Remove a borda do botão do item do carrossel */
     border: none;
+    /* Define o preenchimento do botão do item do carrossel */
     padding: 0.8em 1.5em;
+    /* Define o raio da borda do botão do item do carrossel */
     border-radius: 5px;
+    /* Define o cursor do botão do item do carrossel */
     cursor: pointer;
-    text-shadow: 0 0 5px #00ff00; /* Adicione um efeito de sombra em neon verde */
+    /* Adiciona um efeito de sombra em neon verde ao botão do item do carrossel */
+    text-shadow: 0 0 5px #00ff00; 
 }
 
 .carousel-prev,
 .carousel-next {
+    /* Define a posição absoluta para os botões de navegação do carrossel */
     position: absolute;
+    /* Define a posição vertical dos botões de navegação do carrossel */
     top: 50%;
+    /* Define a transformação dos botões de navegação do carrossel */
     transform: translateY(-50%);
+    /* Define a cor de fundo dos botões de navegação do carrossel */
     background-color: #ff0000;
+    /* Define a cor do texto dos botões de navegação do carrossel */
     color: #fffb00;
+    /* Remove a borda dos botões de navegação do carrossel */
     border: none;
+    /* Define o preenchimento dos botões de navegação do carrossel */
     padding: 0.8em 1.5em;
+    /* Define o raio da borda dos botões de navegação do carrossel */
     border-radius: 5px;
+    /* Define o cursor dos botões de navegação do carrossel */
     cursor: pointer;
+    /* Define a opacidade dos botões de navegação do carrossel */
     opacity: 0.5;
+    /* Define a transição da opacidade dos botões de navegação do carrossel */
     transition: opacity 0.3s ease-in-out;
-    text-shadow: 0 0 5px rgb(255, 238, 0), 0 0 10px rgb(255, 238, 0), 0 0 15px rgb(255, 238, 3); /* Adicione um efeito de sombra em neon verde */
+    /* Adiciona um efeito de sombra em neon verde aos botões de navegação do carrossel */
+    text-shadow: 0 0 5px rgb(255, 238, 0), 0 0 10px rgb(255, 238, 0), 0 0 15px rgb(255, 238, 3); 
 }
 
 .carousel-prev {
+    /* Define a posição esquerda do botão "anterior" do carrossel */
     left: 10px;
 }
 
 .carousel-next {
+    /* Define a posição direita do botão "próximo" do carrossel */
     right: 10px;
 }
 
 .carousel-prev:hover,
 .carousel-next:hover {
+    /* Define a opacidade dos botões de navegação do carrossel ao passar o mouse */
     opacity: 1;
 }
 
 /* Estilo do rodapé */
 footer {
-    background-image: url("preto.jpg");
+    /* Define a imagem de fundo do rodapé */
+    background-image: url("_img/preto.jpg");
+    /* Define a cor do texto do rodapé */
     color: #fff;
+    /* Alinha o texto do rodapé ao centro */
     text-align: center;
+    /* Define o preenchimento do rodapé */
     padding: 1em 0;
-    position: fixed;
+    /* Define a posição do rodapé */
     bottom: 0;
+    /* Define a largura do rodapé */
     width: 100%;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .carousel-item {
+        /* Ajuste a largura dos itens para telas menores */
+        min-width: 150px; 
+    }
 }
