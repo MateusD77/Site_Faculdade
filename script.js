@@ -1,69 +1,73 @@
 // Seleciona os contêineres, trilhas, botões "anterior" e "próximo" do carrossel
-const carouselContainers = document.querySelectorAll('.carousel-container');  // Seleciona todos os elementos com a classe 'carousel-container'
-const carouselTracks = document.querySelectorAll('.carousel-track');  // Seleciona todos os elementos com a classe 'carousel-track'
-const carouselPrevs = document.querySelectorAll('.carousel-prev');  // Seleciona todos os elementos com a classe 'carousel-prev'
-const carouselNexts = document.querySelectorAll('.carousel-next');  // Seleciona todos os elementos com a classe 'carousel-next'
+const carouselContainers = document.querySelectorAll('.carousel-container');
+const carouselTracks = document.querySelectorAll('.carousel-track');
+const carouselPrevs = document.querySelectorAll('.carousel-prev');
+const carouselNexts = document.querySelectorAll('.carousel-next');
 
 // Itera sobre cada contêiner do carrossel
-carouselContainers.forEach((container, index) => {  // Itera sobre cada elemento 'carousel-container'
-  // Obtém a trilha, o botão "anterior" e o botão "próximo" correspondentes ao contêiner atual
-  const track = carouselTracks[index];  // Obtém o elemento 'carousel-track' correspondente
-  const prev = carouselPrevs[index];  // Obtém o elemento 'carousel-prev' correspondente
-  const next = carouselNexts[index];  // Obtém o elemento 'carousel-next' correspondente
+carouselContainers.forEach((container, index) => {
+  const track = carouselTracks[index];
+  const prev = carouselPrevs[index];
+  const next = carouselNexts[index];
 
-  // Clona os itens da trilha para criar um looping contínuo
-  const items = Array.from(track.children);  // Converte os elementos filhos de 'track' em um array
-  const totalItems = items.length;  // Obtém o número total de itens
-  items.forEach(item => {  // Itera sobre cada item
-    const clone = item.cloneNode(true); // Cria um clone do item
-    track.appendChild(clone); // Adiciona o clone à trilha
-  });
+  const initialTotalWidth = container.offsetWidth; // Calcula a largura total do contêiner
+  var initialItems = Array.from(track.children); // Pega os itens reais do carrossel
+  var initialSize = initialItems.length; // Quantidade de itens reais
 
-  // Inicializa o índice do item atual
-  let currentIndex = 0;  // Define o índice atual como 0
+  // Clona os itens para criar um looping contínuo (2x clones para cada lado)
+  const clonesToAppend = 2;
+  const clonesToTeleport = 1; // Define quando o teleporte ocorre
 
-  // Calcula a largura do item (mostra 3 itens de cada vez)
-  const itemWidth = container.offsetWidth / 3;  // Calcula a largura de cada item
+  for (let ix = 0; ix < clonesToAppend; ix++) {
+    initialItems.forEach((item) => {
+      const cloneBefore = item.cloneNode(true);
+      const cloneAfter = item.cloneNode(true);
+      track.appendChild(cloneAfter); // Adiciona o clone no final
+      track.insertBefore(cloneBefore, initialItems[0]); // Adiciona o clone no início
+    });
+  }
 
-  // Função para atualizar a posição do carrossel
-  function updateCarousel() {  // Define a função 'updateCarousel' para atualizar a posição do carrossel
-    // Calcula o deslocamento horizontal baseado no índice atual
-    const offsetX = -currentIndex * itemWidth;  // Calcula o deslocamento horizontal
+  const allItems = Array.from(track.children); // Todos os itens, incluindo os clones
+  const totalSize = allItems.length; // Tamanho total dos itens (reais + clones)
+  const itemWidth = initialItems[0].offsetWidth; // Largura de cada item
+  let currentIndex = initialSize*clonesToTeleport - 1; // Inicia o carrossel no primeiro item real
 
-    // Define a transformação da trilha para deslocar os itens
-    track.style.transform = `translateX(${offsetX}px)`;  // Aplica a transformação de deslocamento
+  // Função que move o carrossel
+  function updateCarousel() {
+    const offsetX = -(currentIndex * itemWidth); // Calcula a posição de deslocamento
+    track.style.transition = 'transform 0.5s ease';
+    track.style.transform = `translateX(${offsetX}px)`;
 
-    // Reinicia o índice quando atinge o ponto de reinício
-    if (currentIndex >= totalItems) {  // Verifica se o índice atual é maior ou igual ao número total de itens
-      currentIndex = 0; // Reinicia o índice
-      track.style.transition = 'none'; // Remove a transição temporariamente para evitar um efeito estranho
-      track.style.transform = `translateX(0)`; // Redefine a posição para o início
-
-      // Restaura a transição após um breve atraso para garantir que o efeito de animação aconteça
-      setTimeout(() => {  // Define um tempo limite para restaurar a transição
-        track.style.transition = ''; // Restaura a transição
-      }, 0);  // O atraso é de 0 milisegundos
+    // Verifica se atingiu os limites para teleportar (clones no início ou no fim)
+    if (currentIndex > initialSize - 1 + (clonesToTeleport * initialSize)) {
+      currentIndex = initialSize - 1;
+      track.style.transition = 'transform 0.5s ease';
+      track.style.transform = `translateX(${-currentIndex * itemWidth}px)`;
+      setTimeout(() => {
+        track.style.transition = 'none'; // Remove a transição
+      }, 500);
+    } else if (currentIndex < initialSize - 1 - (clonesToTeleport * initialSize)) {
+      currentIndex = initialSize - 1; // Volta ao último item real
+      track.style.transition = 'transform 0.5s ease';
+      track.style.transform = `translateX(${-currentIndex * itemWidth}px)`;
+      setTimeout(() => {
+        track.style.transition = 'none'; // Remove a transição
+      }, 500);
     }
   }
 
-  // Adiciona um evento de clique ao botão "anterior"
-  prev.addEventListener('click', () => {  // Adiciona um evento de clique ao botão 'prev'
-    currentIndex--; // Decrementa o índice atual
-
-    // Garante que o índice fique dentro dos limites (looping infinito)
-    if (currentIndex < 0) {  // Verifica se o índice atual é menor que 0
-      currentIndex = totalItems - 1; // Volta para o último item original
-    }
-
-    // Atualiza a posição do carrossel
-    updateCarousel();  // Chama a função 'updateCarousel' para atualizar a posição
+  // Adiciona evento ao botão "anterior" para mover o carrossel
+  prev.addEventListener('click', () => {
+    currentIndex--;
+    updateCarousel();
   });
 
-  // Adiciona um evento de clique ao botão "próximo"
-  next.addEventListener('click', () => {  // Adiciona um evento de clique ao botão 'next'
-    currentIndex++; // Incrementa o índice atual
-
-    // Atualiza a posição do carrossel
-    updateCarousel();  // Chama a função 'updateCarousel' para atualizar a posição
+  // Adiciona evento ao botão "próximo" para mover o carrossel
+  next.addEventListener('click', () => {
+    currentIndex++;
+    updateCarousel();
   });
+
+  // Inicializa o carrossel na posição correta (primeiro item real)
+  track.style.transform = `translateX(${-(currentIndex * itemWidth)}px)`;
 });
