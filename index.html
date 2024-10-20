@@ -12,7 +12,7 @@ Trabalho em Web feito por:
 <head>
     <meta charset="UTF-8">  <!-- Define o conjunto de caracteres como UTF-8 para suporte a caracteres especiais -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Define a viewport para responsividade -->
-    <link rel="stylesheet" href="style.css">  <!-- Liga o arquivo CSS externo -->
+    <link rel="stylesheet" href="_styles/style.css">  <!-- Liga o arquivo CSS externo -->
     <title>PIZZARIAPAC-MAN</title>  <!-- Define o título da página -->
 </head>
 <body>
@@ -26,6 +26,13 @@ Trabalho em Web feito por:
             <li><a href="#hamburgueres">Hambúrgueres</a></li>  <!-- Link para a seção de hambúrgueres -->
             <li><a href="#combos">Combos</a></li>  <!-- Link para a seção de combos -->
             <li><a href="#bebidas">Bebidas</a></li>  <!-- Link para a seção de bebidas -->
+            <li><a href="#carrinho">Carrinho</a></li>
+            <div class="cart-container">
+              <div id="cart-items">
+                <!-- Itens do carrinho serão adicionados aqui -->
+              </div>
+              <p id="cart-total">Total: R$ 0,00</p>
+            </div>
         </ul>
     </nav>
 
@@ -35,50 +42,50 @@ Trabalho em Web feito por:
             <div class="carousel-container">  <!-- Contenedor do carrossel -->
                 <div class="carousel-track">  <!-- Trilha do carrossel -->
                     <div class="carousel-item">  <!-- Item do carrossel -->
-                        <img src="_img/calabresa.jpg" alt="Pizza 1">  <!-- Imagem da pizza -->
+                        <img src="_img/_pz/calabresa.jpg" alt="Pizza 1">  <!-- Imagem da pizza -->
                         <h3>Super Mario Pizza</h3>  <!-- Título da pizza -->
                         <p>Mussarela, calabresa, cebola e pimentão. Uma explosão de sabores para você!</p>  <!-- Descrição da pizza -->
                         <p>R$ 35,00</p>  <!-- Preço da pizza -->
-                        <button>Adicionar ao Carrinho</button>  <!-- Botão para adicionar ao carrinho -->
+                        <button data-product-id="1" data-product-name="Super Mario Pizza" data-product-price="35.00">Adicionar ao Carrinho</button>  <!-- Botão para adicionar ao carrinho -->
                     </div>
                     <div class="carousel-item">  <!-- Item do carrossel -->
-                        <img src="_img/catupiry.jpg" alt="Pizza 2">  <!-- Imagem da pizza -->
+                        <img src="_img/_pz/catupiry.jpg" alt="Pizza 2">  <!-- Imagem da pizza -->
                         <h3>Sonic Pizza</h3>  <!-- Título da pizza -->
                         <p>Queijo, frango, catupiry e milho. A velocidade do sabor, perfeita para sua fome!</p>  <!-- Descrição da pizza -->
                         <p>R$ 40,00</p>  <!-- Preço da pizza -->
-                        <button>Adicionar ao Carrinho</button>  <!-- Botão para adicionar ao carrinho -->
+                        <button data-product-id="2" data-product-name="Sonic Pizza" data-product-price="40.00">Adicionar ao Carrinho</button>  <!-- Botão para adicionar ao carrinho -->
                     </div>
                     <div class="carousel-item">  <!-- Item do carrossel -->
-                        <img src="_img/bacon.jpg" alt="Pizza 3">  <!-- Imagem da pizza -->
+                        <img src="_img/_pz/bacon.jpg" alt="Pizza 3">  <!-- Imagem da pizza -->
                         <h3>Zelda Pizza</h3>  <!-- Título da pizza -->
                         <p>Queijo, carne, bacon e tomate. Uma aventura de sabor que você vai amar!</p>  <!-- Descrição da pizza -->
                         <p>R$ 45,00</p>  <!-- Preço da pizza -->
-                        <button>Adicionar ao Carrinho</button>  <!-- Botão para adicionar ao carrinho -->
+                        <button data-product-id="3" data-product-name="Zelda Pizza" data-product-price="45.00">Adicionar ao Carrinho</button>  <!-- Botão para adicionar ao carrinho -->
                     </div>
                     <div class="carousel-item">  <!-- Item do carrossel -->
-                        <img src="_img/portuguesa.jpg" alt="Pizza 4">  <!-- Imagem da pizza -->
+                        <img src="_img/_pz/portuguesa.jpg" alt="Pizza 4">  <!-- Imagem da pizza -->
                         <h3>Donkey Kong Pizza</h3>  <!-- Título da pizza -->
                         <p>Queijo, portuguesa, ovo e azeitona. Uma experiência saborosa e divertida!</p>  <!-- Descrição da pizza -->
                         <p>R$ 50,00</p>  <!-- Preço da pizza -->
-                        <button>Adicionar ao Carrinho</button>  <!-- Botão para adicionar ao carrinho -->
+                        <button data-product-id="4" data-product-name="Donkey Kong Pizza" data-product-price="50.00">Adicionar ao Carrinho</button>  <!-- Botão para adicionar ao carrinho -->
                     </div>
                     <div class="carousel-item">  <!-- Item do carrossel -->
-                        <img src="_img/pac.jpg" alt="Pizza 5">  <!-- Imagem da pizza -->
+                        <img src="_img/_pz/pac.jpg" alt="Pizza 5">  <!-- Imagem da pizza -->
                         <h3>Pac-Man Pizza</h3>  <!-- Título da pizza -->
                         <p>Queijo, calabresa, champignon e orégano. A pizza que vai te dar vontade de jogar!</p>  <!-- Descrição da pizza -->
                         <p>R$ 55,00</p>  <!-- Preço da pizza -->
-                        <button>Adicionar ao Carrinho</button>  <!-- Botão para adicionar ao carrinho -->
+                        <button data-product-id="5" data-product-name="Pac-Man Pizza" data-product-price="55.00">Adicionar ao Carrinho</button>  <!-- Botão para adicionar ao carrinho -->
                     </div>
                     <div class="carousel-item">  <!-- Item do carrossel -->
-                        <img src="_img/04.jpg" alt="Pizza 6">  <!-- Imagem da pizza -->
+                        <img src="_img/_pz/04.jpg" alt="Pizza 6">  <!-- Imagem da pizza -->
                         <h3>Mega Man Pizza</h3>  <!-- Título da pizza -->
                         <p>Gorgonzola, parmesão, provolone e muçarela. Uma combinação imbatível para seu paladar!</p>  <!-- Descrição da pizza -->
                         <p>R$ 60,00</p>  <!-- Preço da pizza -->
-                        <button>Adicionar ao Carrinho</button>  <!-- Botão para adicionar ao carrinho -->
+                        <button data-product-id="6" data-product-name="Mega Man Pizza" data-product-price="60.00">Adicionar ao Carrinho</button>  <!-- Botão para adicionar ao carrinho -->
                     </div>
                 </div>
-                <button class="carousel-prev">Anterior</button>  <!-- Botão para navegar para o item anterior do carrossel -->
-                <button class="carousel-next">Próximo</button>  <!-- Botão para navegar para o próximo item do carrossel -->
+                <button class="carousel-prev"><</button>  <!-- Botão para navegar para o item anterior do carrossel -->
+                <button class="carousel-next">></button>  <!-- Botão para navegar para o próximo item do carrossel -->
             </div>
         </section>
 
@@ -87,46 +94,46 @@ Trabalho em Web feito por:
             <div class="carousel-container">  <!-- Contenedor do carrossel -->
                 <div class="carousel-track">  <!-- Trilha do carrossel -->
                     <div class="carousel-item">  <!-- Item do carrossel -->
-                        <img src="_img/carne.jpg" alt="Hambúrguer 1">  <!-- Imagem do hambúrguer -->
+                        <img src="_img/_hg/carne.jpg" alt="Hambúrguer 1">  <!-- Imagem do hambúrguer -->
                         <h3>Mario Burger</h3>  <!-- Título do hambúrguer -->
                         <p>Carne, queijo, alface, tomate e molho especial. Uma combinação clássica e deliciosa!</p>  <!-- Descrição do hambúrguer -->
                         <p>R$ 25,00</p>  <!-- Preço do hambúrguer -->
-                        <button>Adicionar ao Carrinho</button>  <!-- Botão para adicionar ao carrinho -->
+                        <button data-product-id="7" data-product-name="Mario Burger" data-product-price="25.00">Adicionar ao Carrinho</button>  <!-- Botão para adicionar ao carrinho -->
                     </div>
                     <div class="carousel-item">  <!-- Item do carrossel -->
-                        <img src="_img/hbsonic.jpg" alt="Hambúrguer 2">  <!-- Imagem do hambúrguer -->
+                        <img src="_img/_hg/hbsonic.jpg" alt="Hambúrguer 2">  <!-- Imagem do hambúrguer -->
                         <h3>Sonic Burger</h3>  <!-- Título do hambúrguer -->
                         <p>Carne, queijo, bacon, cebola caramelizada e molho barbecue. A velocidade do sabor!</p>  <!-- Descrição do hambúrguer -->
                         <p>R$ 30,00</p>  <!-- Preço do hambúrguer -->
-                        <button>Adicionar ao Carrinho</button>  <!-- Botão para adicionar ao carrinho -->
+                        <button data-product-id="8" data-product-name="Sonic Burger" data-product-price="30.00">Adicionar ao Carrinho</button>  <!-- Botão para adicionar ao carrinho -->
                     </div>
                     <div class="carousel-item">  <!-- Item do carrossel -->
-                        <img src="_img/molho.jpg" alt="Hambúrguer 3">  <!-- Imagem do hambúrguer -->
+                        <img src="_img/_hg/molho.jpg" alt="Hambúrguer 3">  <!-- Imagem do hambúrguer -->
                         <h3>Luigi Burger</h3>  <!-- Título do hambúrguer -->
                         <p>Carne, queijo, ovo, batata palha e molho agridoce. Uma explosão de sabores!</p>  <!-- Descrição do hambúrguer -->
                         <p>R$ 35,00</p>  <!-- Preço do hambúrguer -->
-                        <button>Adicionar ao Carrinho</button>  <!-- Botão para adicionar ao carrinho -->
+                        <button data-product-id="9" data-product-name="Luigi Burger" data-product-price="35.00">Adicionar ao Carrinho</button>  <!-- Botão para adicionar ao carrinho -->
                     </div>
                     <div class="carousel-item">  <!-- Item do carrossel -->
-                        <img src="_img/maionase.jpg" alt="Hambúrguer 4">  <!-- Imagem do hambúrguer -->
+                        <img src="_img/_hg/maionase.jpg" alt="Hambúrguer 4">  <!-- Imagem do hambúrguer -->
                         <h3>Link Burger</h3>  <!-- Título do hambúrguer -->
                         <p>Carne, queijo, alface, tomate, cebola e maionese. A combinação perfeita para sua aventura!</p>  <!-- Descrição do hambúrguer -->
                         <p>R$ 40,00</p>  <!-- Preço do hambúrguer -->
-                        <button>Adicionar ao Carrinho</button>  <!-- Botão para adicionar ao carrinho -->
+                        <button data-product-id="10" data-product-name="Link Burger" data-product-price="40.00">Adicionar ao Carrinho</button>  <!-- Botão para adicionar ao carrinho -->
                     </div>
                     <div class="carousel-item">  <!-- Item do carrossel -->
-                        <img src="_img/pimenta.jpg" alt="Hambúrguer 5">  <!-- Imagem do hambúrguer -->
+                        <img src="_img/_hg/pimenta.jpg" alt="Hambúrguer 5">  <!-- Imagem do hambúrguer -->
                         <h3>Samus Burger</h3>  <!-- Título do hambúrguer -->
                         <p>Carne, queijo, bacon, ovo, picles e molho picante. Para os que gostam de um toque especial!</p>  <!-- Descrição do hambúrguer -->
                         <p>R$ 45,00</p>  <!-- Preço do hambúrguer -->
-                        <button>Adicionar ao Carrinho</button>  <!-- Botão para adicionar ao carrinho -->
+                        <button data-product-id="11" data-product-name="Samus Burger" data-product-price="45.00">Adicionar ao Carrinho</button>  <!-- Botão para adicionar ao carrinho -->
                     </div>
                     <div class="carousel-item">  <!-- Item do carrossel -->
-                        <img src="_img/especial.jpg" alt="Hambúrguer 6">  <!-- Imagem do hambúrguer -->
+                        <img src="_img/_hg/especial.jpg" alt="Hambúrguer 6">  <!-- Imagem do hambúrguer -->
                         <h3>Pikachu Burger</h3>  <!-- Título do hambúrguer -->
                         <p>Carne, queijo, alface, tomate e molho especial. Uma combinação clássica e saborosa!</p>  <!-- Descrição do hambúrguer -->
                         <p>R$ 50,00</p>  <!-- Preço do hambúrguer -->
-                        <button>Adicionar ao Carrinho</button>  <!-- Botão para adicionar ao carrinho -->
+                        <button data-product-id="12" data-product-name="Pikachu Burger" data-product-price="50.00">Adicionar ao Carrinho</button>  <!-- Botão para adicionar ao carrinho -->
                     </div>
                 </div>
                 <button class="carousel-prev">Anterior</button>  <!-- Botão para navegar para o item anterior do carrossel -->
@@ -142,25 +149,25 @@ Trabalho em Web feito por:
                         <h3>Combo Super Mario</h3>  <!-- Título do combo -->
                         <p>Pizza Super Mario + Refrigerante + Batata Frita. A combinação perfeita para uma refeição completa!</p>  <!-- Descrição do combo -->
                         <p>R$ 50,00</p>  <!-- Preço do combo -->
-                        <button>Adicionar ao Carrinho</button>  <!-- Botão para adicionar ao carrinho -->
+                        <button data-product-id="13" data-product-name="Combo Super Mario" data-product-price="50.00">Adicionar ao Carrinho</button>  <!-- Botão para adicionar ao carrinho -->
                     </div>
                     <div class="carousel-item">  <!-- Item do carrossel -->
                         <h3>Combo Sonic</h3>  <!-- Título do combo -->
                         <p>Sonic Burger + Refrigerante + Batata Frita. A velocidade do sabor em um combo irresistível!</p>  <!-- Descrição do combo -->
                         <p>R$ 40,00</p>  <!-- Preço do combo -->
-                        <button>Adicionar ao Carrinho</button>  <!-- Botão para adicionar ao carrinho -->
+                        <button data-product-id="14" data-product-name="Combo Sonic" data-product-price="40.00">Adicionar ao Carrinho</button>  <!-- Botão para adicionar ao carrinho -->
                     </div>
                     <div class="carousel-item">  <!-- Item do carrossel -->
                         <h3>Combo Pac-Man</h3>  <!-- Título do combo -->
                         <p>Pac-Man Pizza + Refrigerante + Batata Frita. Um combo para você se divertir e saciar a fome!</p>  <!-- Descrição do combo -->
                         <p>R$ 60,00</p>  <!-- Preço do combo -->
-                        <button>Adicionar ao Carrinho</button>  <!-- Botão para adicionar ao carrinho -->
+                        <button data-product-id="15" data-product-name="Combo Pac-Man" data-product-price="60.00">Adicionar ao Carrinho</button>  <!-- Botão para adicionar ao carrinho -->
                     </div>
                     <div class="carousel-item">  <!-- Item do carrossel -->
                         <h3>Combo Zelda</h3>  <!-- Título do combo -->
                         <p>Zelda Pizza + Refrigerante + Batata Frita. Uma aventura de sabor para você!</p>  <!-- Descrição do combo -->
                         <p>R$ 55,00</p>  <!-- Preço do combo -->
-                        <button>Adicionar ao Carrinho</button>  <!-- Botão para adicionar ao carrinho -->
+                        <button data-product-id="16" data-product-name="Combo Zelda" data-product-price="55.00">Adicionar ao Carrinho</button>  <!-- Botão para adicionar ao carrinho -->
                     </div>
                 </div>
                 <button class="carousel-prev">Anterior</button>  <!-- Botão para navegar para o item anterior do carrossel -->
@@ -176,37 +183,37 @@ Trabalho em Web feito por:
                         <h3>Refrigerante</h3>  <!-- Título da bebida -->
                         <p>Coca-Cola, Pepsi, Fanta, Sprite. Para acompanhar sua refeição com um toque especial!</p>  <!-- Descrição da bebida -->
                         <p>R$ 5,00</p>  <!-- Preço da bebida -->
-                        <button>Adicionar ao Carrinho</button>  <!-- Botão para adicionar ao carrinho -->
+                        <button data-product-id="17" data-product-name="Refrigerante" data-product-price="5.00">Adicionar ao Carrinho</button>  <!-- Botão para adicionar ao carrinho -->
                     </div>
                     <div class="carousel-item">  <!-- Item do carrossel -->
                         <h3>Suco</h3>  <!-- Título da bebida -->
                         <p>Laranja, Morango, Abacaxi, Uva. Refrescante e delicioso para qualquer ocasião!</p>  <!-- Descrição da bebida -->
                         <p>R$ 6,00</p>  <!-- Preço da bebida -->
-                        <button>Adicionar ao Carrinho</button>  <!-- Botão para adicionar ao carrinho -->
+                        <button data-product-id="18" data-product-name="Suco" data-product-price="6.00">Adicionar ao Carrinho</button>  <!-- Botão para adicionar ao carrinho -->
                     </div>
                     <div class="carousel-item">  <!-- Item do carrossel -->
                         <h3>Água</h3>  <!-- Título da bebida -->
                         <p>Com gás ou sem gás. Para hidratar e refrescar!</p>  <!-- Descrição da bebida -->
                         <p>R$ 3,00</p>  <!-- Preço da bebida -->
-                        <button>Adicionar ao Carrinho</button>  <!-- Botão para adicionar ao carrinho -->
+                        <button data-product-id="19" data-product-name="Água" data-product-price="3.00">Adicionar ao Carrinho</button>  <!-- Botão para adicionar ao carrinho -->
                     </div>
                     <div class="carousel-item">  <!-- Item do carrossel -->
                         <h3>Cerveja</h3>  <!-- Título da bebida -->
                         <p>Brahma, Skol, Heineken, Stella Artois. Para completar seu momento de lazer!</p>  <!-- Descrição da bebida -->
                         <p>R$ 8,00</p>  <!-- Preço da bebida -->
-                        <button>Adicionar ao Carrinho</button>  <!-- Botão para adicionar ao carrinho -->
+                        <button data-product-id="20" data-product-name="Cerveja" data-product-price="8.00">Adicionar ao Carrinho</button>  <!-- Botão para adicionar ao carrinho -->
                     </div>
                     <div class="carousel-item">  <!-- Item do carrossel -->
                         <h3>Vinho</h3>  <!-- Título da bebida -->
                         <p>Tinto, Branco, Rosé. Para um brinde especial!</p>  <!-- Descrição da bebida -->
                         <p>R$ 20,00</p>  <!-- Preço da bebida -->
-                        <button>Adicionar ao Carrinho</button>  <!-- Botão para adicionar ao carrinho -->
+                        <button data-product-id="21" data-product-name="Vinho" data-product-price="20.00">Adicionar ao Carrinho</button>  <!-- Botão para adicionar ao carrinho -->
                     </div>
                     <div class="carousel-item">  <!-- Item do carrossel -->
                         <h3>Whisky</h3>  <!-- Título da bebida -->
                         <p>Red Label, Black Label, Chivas Regal. Para um momento de puro prazer!</p>  <!-- Descrição da bebida -->
                         <p>R$ 30,00</p>  <!-- Preço da bebida -->
-                        <button>Adicionar ao Carrinho</button>  <!-- Botão para adicionar ao carrinho -->
+                        <button data-product-id="22" data-product-name="Whisky" data-product-price="30.00">Adicionar ao Carrinho</button>  <!-- Botão para adicionar ao carrinho -->
                     </div>
                 </div>
                 <button class="carousel-prev">Anterior</button>  <!-- Botão para navegar para o item anterior do carrossel -->
@@ -219,6 +226,7 @@ Trabalho em Web feito por:
         Copyright © 2024 - Turma TI Estácio. Todos os direitos reservados.  <!-- Informações de copyright -->
     </footer>
 
-    <script src="script.js"></script>  <!-- Liga o arquivo JavaScript externo -->
+    <script src="_scripts/script.js"></script>  <!-- Liga o arquivo JavaScript externo -->
+    <script src="_scripts/carrinho.js"></script>
 </body>
 </html>
