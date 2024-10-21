@@ -13,6 +13,13 @@ body {
     background-position: center; /* Centraliza a imagem de fundo */
     font-family: 'Jersey 15', sans-serif; /* Define a fonte "Jersey 15" como padrão */
 }
+.carrinho {
+    width: 100px; /* Define a largura da imagem */
+    height: 100px; /* Define a altura da imagem */
+    position: absolute; /* Posiciona a imagem absolutamente */
+    top: 20px; /* Define a distância da parte superior da imagem */
+    right: 20px; /* Define a distância da parte direita da imagem */
+}
 
 header {
     background-image: url("../_img/_fd/preto.jpg"); /* Define a imagem de fundo */
@@ -37,7 +44,7 @@ sub {
 
 
 nav {
-    background-color: rgb(90, 0, 90); /* Define a cor de fundo rosa translúcido */
+    background-image: url(../_img/_fd/preto.jpg);
     padding: 1em 0; /* Define espaçamento interno */
     text-align: center; /* Alinha o texto ao centro */
 }
