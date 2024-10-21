@@ -1,0 +1,170 @@
+/* Importação de Fontes do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Jacquard+12&family=Jersey+15&display=swap'); /* Importa as fontes "Jacquard 12" e "Jersey 15" */
+@import url('https://fonts.googleapis.com/css2?family=Fascinate+Inline&family=Indie+Flower&family=Jersey+15&family=Protest+Guerrilla&display=swap'); /* Importa as fontes "Fascinate Inline", "Indie Flower", "Jersey 15" e "Protest Guerrilla" */
+
+/* Estilo geral */
+body {
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove espaçamento interno padrão */
+    background-color: #f4f4f4; /* Define a cor de fundo cinza claro */
+    background-image: url("../_img/_fd/fundopt.jpg"); /* Define a imagem de fundo */
+    background-repeat: repeat; /* Repete a imagem de fundo */
+    background-attachment: fixed; /* Faz a imagem de fundo ficar fixa */
+    background-position: center; /* Centraliza a imagem de fundo */
+    font-family: 'Jersey 15', sans-serif; /* Define a fonte "Jersey 15" como padrão */
+}
+
+/* Estilo do carrinho */
+.carrinho {
+    width: 100px; /* Define a largura da imagem */
+    height: 100px; /* Define a altura da imagem */
+    position: absolute; /* Posiciona a imagem absolutamente */
+    top: 20px; /* Define a distância da parte superior da imagem */
+    right: 20px; /* Define a distância da parte direita da imagem */
+}
+
+/* Estilo do cabeçalho */
+header {
+    background-image: url("../_img/_fd/preto.jpg"); /* Define a imagem de fundo */
+    color: #fff; /* Define a cor do texto para branco */
+    text-align: center; /* Alinha o texto ao centro */
+    padding: 1em 0; /* Define espaçamento interno */
+}
+
+/* Estilo do título do cabeçalho */
+h1 {
+    font-family: 'Protest Guerrilla'; /* Define a fonte "Protest Guerrilla" */
+    color: rgb(255, 238, 3); /* Define a cor do texto para amarelo */
+    text-shadow: 0 0 5px rgb(255, 0, 0), 0 0 10px rgb(255, 0, 0), 0 0 15px rgb(255, 0, 0); /* Adiciona uma sombra em neon vermelho */
+    font-size: 2.5em; /* Define o tamanho da fonte */
+}
+
+/* Estilo do subtítulo do cabeçalho */
+sub {
+    font-family: "Indie Flower", cursive; /* Define a fonte "Indie Flower" */
+    color: rgb(255, 0, 0); /* Define a cor do texto para vermelho */
+    font-size: 80%; /* Define o tamanho da fonte */
+    text-shadow: 0 0 5px rgb(255, 238, 0), 0 0 10px rgb(255, 238, 0), 0 0 15px rgb(255, 238, 3); /* Adiciona uma sombra em neon verde */
+}
+
+/* Estilo da barra de navegação */
+nav {
+    background-image: url(../_img/_fd/preto.jpg);
+    padding: 1em 0; /* Define espaçamento interno */
+    text-align: center; /* Alinha o texto ao centro */
+}
+
+/* Estilo da lista da barra de navegação */
+nav ul {
+    list-style: none; /* Remove marcadores da lista */
+    margin: 1px; /* Remove margens padrão */
+    padding: 0; /* Remove espaçamento interno padrão */
+}
+
+/* Estilo dos itens da lista da barra de navegação */
+nav li {
+    display: inline-block; /* Exibe os itens da lista na mesma linha */
+    margin: 0 1em; /* Define margens entre os itens da lista */
+}
+
+/* Estilo dos links da barra de navegação */
+nav a {
+    text-decoration: none; /* Remove o sublinhado dos links */
+    color: rgb(252, 252, 252); /* Define a cor dos links */
+    text-shadow: 1px 2px 0 rgb(255, 15, 15);
+    font-weight: normal; /* Define o peso da fonte para negrito */
+    font-size: 30px;
+}
+
+/* Estilo da área principal */
+main {
+    padding: 2em; /* Define espaçamento interno */
+}
+
+/* Estilo das seções */
+section {
+    background-image: url("../_img/_fd/preto.jpg"); /* Define a imagem de fundo */
+    padding: 2em; /* Define espaçamento interno */
+    margin-bottom: 2em; /* Define margem inferior */
+    border-radius: 10px; /* Arredonda as bordas */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra */
+    overflow: hidden; /* Oculta o overflow do conteúdo */
+}
+
+/* Estilo dos títulos das seções */
+section h2 {
+    font-family: 'Jersey 15'; /* Define a fonte "Jersey 15" */
+    font-size: 250%; /* Define o tamanho da fonte */
+    color: rgb(255, 238, 3); /* Define a cor do texto para amarelo */
+    text-shadow: 0 0 5px rgb(255, 0, 0), 0 0 10px rgb(255, 0, 0), 0 0 15px rgb(255, 0, 0); /* Adiciona uma sombra em neon vermelho */
+}
+
+/* Estilo do rodapé */
+footer {
+    background-image: url("../_img/_fd/preto.jpg"); /* Define a imagem de fundo */
+    color: #fff; /* Define a cor do texto para branco */
+    text-align: center; /* Alinha o texto ao centro */
+    padding: 1em 0; /* Define espaçamento interno */
+    bottom: 0; /* Define a posição do rodapé */
+    width: 100%; /* Define a largura do rodapé */
+}
+
+/* Estilo do carrinho */
+#carrinho {
+    background-color: #fff; /* Define a cor de fundo branca */
+    border-radius: 10px; /* Arredonda as bordas */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra */
+    padding: 20px; /* Define espaçamento interno */
+    text-align: center; /* Alinha o texto ao centro */
+}
+
+
+/* Estilo do total do carrinho */
+#cart-total {
+    color: #f4f4f4;
+    font-size: 1.2em; /* Define o tamanho da fonte */
+    margin-bottom: 10px; /* Define margem inferior */
+}
+
+/* Estilo do botão de finalizar compra */
+#checkout-button {
+    font-family: 'Protest Guerrilla';
+    background-color: #ff0000; /* Define a cor de fundo vermelho */
+    color: #000000; /* Define a cor do texto para branco */
+    border: none; /* Remove a borda do botão */
+    padding: 10px 20px; /* Define espaçamento interno */
+    border-radius: 5px; /* Arredonda as bordas do botão */
+    cursor: pointer; /* Define o cursor do mouse para um ponteiro */
+    font-size: 1.1em; /* Define o tamanho da fonte */
+    transition: background-color 0.3s ease-in-out; /* Define a transição para animação suave */
+}
+
+/* Estilo do container de itens do carrinho */
+#cart-items-container {
+    color: #f4f4f4;
+    font-size: 20px;
+    display: flex; /* Define o layout do elemento como flexbox */
+    flex-direction: row; /* Define a direção do flexbox como linha */
+    /* Outros estilos para os itens do carrinho podem ser adicionados aqui */
+  }
+
+  .cart-item {
+    margin-right: 20px; /* Adiciona margem direita a cada item */
+  }
+
+/* Estilo do botão ao passar o mouse */
+#checkout-button:hover {
+    background-color: #fac000; /* Define a cor de fundo para vermelho mais escuro ao passar o mouse */
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    #carrinho {
+        padding: 10px; /* Define espaçamento interno menor para telas menores */
+    }
+
+    #checkout-button {
+        font-size: 1em; /* Define o tamanho da fonte menor para telas menores */
+    }
+}
+
